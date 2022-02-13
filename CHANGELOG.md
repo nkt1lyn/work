@@ -1,0 +1,4 @@
+- Added lab2_zad.pdf
+- Added lab2.pdf
+- Added hello
+- Added gitatributes
