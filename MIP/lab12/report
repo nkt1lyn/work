@@ -1,0 +1,112 @@
+CPN Tools state space report for:
+/cygdrive/C/lab12/lab12.cpn
+Report generated: Fri May 27 00:02:26 2022
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  64284
+     Arcs:   765577
+     Secs:   300
+     Status: Partial
+
+  Scc Graph
+     Nodes:  507
+     Arcs:   574246
+     Secs:   3
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     New_Page'A 1            506        0
+     New_Page'B 1            252        0
+     New_Page'C 1            0          0
+     New_Page'D 1            0          0
+     New_Page'NextRec 1      1          1
+     New_Page'NextSend 1     1          1
+     New_Page'Receiver 1     1          1
+     New_Page'SA 1           1          1
+     New_Page'SP 1           1          1
+     New_Page'send 1         8          8
+
+  Best Upper Multi-set Bounds
+     New_Page'A 1        506`(1,"Modellin")
+     New_Page'B 1        252`(1,"Modellin")
+     New_Page'C 1        empty
+     New_Page'D 1        empty
+     New_Page'NextRec 1  1`1
+     New_Page'NextSend 1 1`1
+     New_Page'Receiver 1 1`""
+     New_Page'SA 1       1`8
+     New_Page'SP 1       1`8
+     New_Page'send 1     1`(1,"Modellin")++
+1`(2,"g and An")++
+1`(3,"alysis b")++
+1`(4,"y Means ")++
+1`(5,"of Colou")++
+1`(6,"red Petr")++
+1`(7,"y Nets##")++
+1`(8,"########")
+
+  Best Lower Multi-set Bounds
+     New_Page'A 1        empty
+     New_Page'B 1        empty
+     New_Page'C 1        empty
+     New_Page'D 1        empty
+     New_Page'NextRec 1  1`1
+     New_Page'NextSend 1 1`1
+     New_Page'Receiver 1 1`""
+     New_Page'SA 1       1`8
+     New_Page'SP 1       1`8
+     New_Page'send 1     1`(1,"Modellin")++
+1`(2,"g and An")++
+1`(3,"alysis b")++
+1`(4,"y Means ")++
+1`(5,"of Colou")++
+1`(6,"red Petr")++
+1`(7,"y Nets##")++
+1`(8,"########")
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     None
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     254 [64284,64283,64282,64281,64280,...]
+
+  Dead Transition Instances
+     New_Page'Send_ACK 1
+     New_Page'Transmit_ACK 1
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+
+  Impartial Transition Instances
+     New_Page'Send_Packet 1
+     New_Page'Transmit_Packet 1
+
+  Fair Transition Instances
+     New_Page'Send_ACK 1
+     New_Page'Transmit_ACK 1
+
+  Just Transition Instances
+     None
+
+  Transition Instances with No Fairness
+     None

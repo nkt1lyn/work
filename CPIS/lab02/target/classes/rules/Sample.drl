@@ -1,0 +1,109 @@
+package com.sample
+ 
+import com.sample.DroolsTest.Computer;
+// правила все по порядку из дано, salience - это приоритет, устанавливает порядок применения правил
+rule "R1"
+salience 1
+lock-on-active true
+    when
+        m : Computer(type == 1)
+    then
+        int[] t = {1,2,3};
+        m.setTests(t);
+        // обновляем базу знаний
+        update(m);
+end
+
+rule "R2"
+salience 1
+lock-on-active true
+    when
+        m : Computer(type == 2, func[1] == 1)
+    then
+        int[] t = {4,5};
+        m.setTests(t);
+        update(m);
+end
+
+rule "R3"
+salience 100
+no-loop
+    when
+        m : Computer(type == 2, func[0] == 1)
+    then
+        int[] t = {2,3};
+        m.setTests(t);
+        update(m);
+end
+
+rule "R4"
+salience 100
+no-loop
+    when
+        m : Computer(type == 2, func[2] == 1)
+    then
+        int[] t = {3,4};
+        m.setTests(t);
+        update(m);
+end
+
+rule "R5"
+salience 100
+no-loop
+    when
+        m : Computer(type == 2, func[3] == 1)
+    then
+        int[] t = {1,3};
+        m.setTests(t);
+        update(m);
+end
+
+rule "R6"
+salience 50
+no-loop
+    when
+        m : Computer(tests[0] == 1, testDate.getTime() == releaseDate.getTime())
+    then
+        m.setTestDate(3);
+        update(m);
+end
+
+rule "R7"
+salience 40
+no-loop
+    when
+        m : Computer(tests[1] == 1, testDate.getTime() == releaseDate.getTime())
+    then
+        m.setTestDate(7);
+        update(m);
+end
+
+rule "R8"
+salience 30
+no-loop
+    when
+        m : Computer(tests[2] == 1, testDate.getTime() == releaseDate.getTime())
+    then
+        m.setTestDate(10);
+        update(m);
+end
+
+rule "R9"
+salience 20
+no-loop
+    when
+        m : Computer(tests[3] == 1, testDate.getTime() == releaseDate.getTime())
+    then
+        m.setTestDate(12);
+        update(m);
+end
+
+rule "R10"
+salience 10
+no-loop
+    when
+        m : Computer(tests[4] == 1, testDate.getTime() == releaseDate.getTime())
+    then
+        m.setTestDate(14);
+        update(m);
+end

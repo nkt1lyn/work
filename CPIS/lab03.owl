@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4">
+        <rdfs:comment>Сервис бронирования жилья</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Забронировано -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Забронировано">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Сейчас_арендовано -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Сейчас_арендовано">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Возраст -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Возраст">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Количество_мест -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Количество_мест">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Квартира -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Квартира">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Количество_мест"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отель"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отель -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отель">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Количество_мест"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Количество_мест"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Андреев_Андрей -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Андреев_Андрей">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+        <Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</Возраст>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Бачуринская_д.13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Бачуринская_д.13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Квартира"/>
+        <Сейчас_арендовано rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Иванов_Иван"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Звезда -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Звезда">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отель"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Иванов_Иван -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Иванов_Иван">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+        <Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</Возраст>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Ленинский_проспект_д.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Ленинский_проспект_д.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Квартира"/>
+        <Забронировано rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Андреев_Андрей"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Москва -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Москва">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отель"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Олегов_Олег -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Олегов_Олег">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+        <Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#int">41</Возраст>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отдых -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отдых">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел"/>
+        <Сейчас_арендовано rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Сергеев_Сергей"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Петров_Петр -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Петров_Петр">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+        <Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</Возраст>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Подушка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Подушка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Привокзальный -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Привокзальный">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Хостел"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Профсоюзная_д.128 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Профсоюзная_д.128">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Квартира"/>
+        <Сейчас_арендовано rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Петров_Петр"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Сергеев_Сергей -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Сергеев_Сергей">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Арендатор"/>
+        <Возраст rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</Возраст>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Солнце -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Солнце">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Отель"/>
+        <Забронировано rdf:resource="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Иванов_Иван"/>
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Количество_мест>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Ульянова_д.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nkt1lyn/ontologies/2022/11/untitled-ontology-4#Ульянова_д.5">
+        <Количество_мест rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Количество_мест>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

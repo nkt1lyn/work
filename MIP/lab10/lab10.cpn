@@ -1,0 +1,2042 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE workspaceElements PUBLIC "-//CPN//DTD CPNXML 1.0//EN" "http://cpntools.org/DTD/6/cpn.dtd">
+
+<workspaceElements>
+  <generator tool="CPN Tools"
+             version="4.0.1"
+             format="6"/>
+  <cpnet>
+    <globbox>
+      <block id="ID1412310166">
+        <id>Standard priorities</id>
+        <ml id="ID1412310255">val P_HIGH = 100;
+          <layout>val P_HIGH = 100;</layout>
+        </ml>
+        <ml id="ID1412310292">val P_NORMAL = 1000;
+          <layout>val P_NORMAL = 1000;</layout>
+        </ml>
+        <ml id="ID1412310322">val P_LOW = 10000;
+          <layout>val P_LOW = 10000;</layout>
+        </ml>
+      </block>
+      <block id="ID1">
+        <id>Standard declarations</id>
+        <color id="ID85042">
+          <id>UNIT</id>
+          <unit/>
+          <layout>colset UNIT = unit;</layout>
+        </color>
+        <color id="ID4">
+          <id>BOOL</id>
+          <bool/>
+        </color>
+        <color id="ID3">
+          <id>INT</id>
+          <int/>
+        </color>
+        <color id="ID1412312409">
+          <id>INTINF</id>
+          <intinf/>
+          <layout>colset INTINF = intinf;</layout>
+        </color>
+        <color id="ID1412312425">
+          <id>TIME</id>
+          <time/>
+          <layout>colset TIME = time;</layout>
+        </color>
+        <color id="ID1412322990">
+          <id>REAL</id>
+          <real/>
+          <layout>colset REAL = real;</layout>
+        </color>
+        <color id="ID5">
+          <id>STRING</id>
+          <string/>
+        </color>
+      </block>
+      <ml id="ID1412339719">val n = 5;
+        <layout>val n = 5;</layout>
+      </ml>
+      <color id="ID1412339895">
+        <id>ph</id>
+        <index>
+          <ml>1</ml>
+          <ml>n</ml>
+          <id>phi</id>
+        </index>
+        <layout>colset ph = index phi with 1..n;</layout>
+      </color>
+      <color id="ID1412340084">
+        <id>st</id>
+        <index>
+          <ml>1</ml>
+          <ml>n</ml>
+          <id>sti</id>
+        </index>
+        <layout>colset st = index sti with 1..n;</layout>
+      </color>
+      <var id="ID1412340285">
+        <type>
+          <id>ph</id>
+        </type>
+        <id>p</id>
+        <layout>var p:ph;</layout>
+      </var>
+      <ml id="ID1412340497">fun changes(phi(i)) = 1`sti(i)++1`sti(if i = n then 1 else i+1)
+        <layout>fun changes(phi(i)) = 1`sti(i)++1`sti(if i = n then 1 else i+1)</layout>
+      </ml>
+    </globbox>
+    <page id="ID6">
+      <pageattr name="New Page"/>
+      <place id="ID1412338500">
+        <posattr x="-252.000000"
+                 y="168.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>thinks</text>
+        <ellipse w="60.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="24.000000"
+                 y="9.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="1"
+                anchor.vertical="3"/>
+        </marking>
+        <type id="ID1412338501">
+          <posattr x="-219.000000"
+                   y="144.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">ph</text>
+        </type>
+        <initmark id="ID1412338502">
+          <posattr x="-205.000000"
+                   y="191.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">ph.all()</text>
+        </initmark>
+      </place>
+      <place id="ID1412338710">
+        <posattr x="-252.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>eats</text>
+        <ellipse w="60.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412338711">
+          <posattr x="-219.000000"
+                   y="-23.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">ph</text>
+        </type>
+        <initmark id="ID1412338712">
+          <posattr x="-195.000000"
+                   y="23.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </initmark>
+      </place>
+      <place id="ID1412338945">
+        <posattr x="-126.000000"
+                 y="-42.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>sticks on table</text>
+        <ellipse w="60.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="27.000000"
+                 y="3.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="1"
+                anchor.vertical="3"/>
+        </marking>
+        <type id="ID1412338946">
+          <posattr x="-95.000000"
+                   y="-65.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">st</text>
+        </type>
+        <initmark id="ID1412338947">
+          <posattr x="-81.000000"
+                   y="-18.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">st.all()</text>
+        </initmark>
+      </place>
+      <trans id="ID1412338536"
+             explicit="false">
+        <posattr x="-252.000000"
+                 y="84.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>take sticks</text>
+        <box w="78.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412338537">
+          <posattr x="-300.000000"
+                   y="115.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </cond>
+        <time id="ID1412338538">
+          <posattr x="-198.500000"
+                   y="115.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </time>
+        <code id="ID1412338539">
+          <posattr x="-178.500000"
+                   y="32.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </code>
+        <priority id="ID1412338541">
+          <posattr x="-329.000000"
+                   y="53.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </priority>
+      </trans>
+      <trans id="ID1412338838"
+             explicit="false">
+        <posattr x="-252.000000"
+                 y="-108.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>put sticks</text>
+        <box w="60.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412338839">
+          <posattr x="-291.000000"
+                   y="-77.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </cond>
+        <time id="ID1412338840">
+          <posattr x="-207.500000"
+                   y="-77.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </time>
+        <code id="ID1412338841">
+          <posattr x="-187.500000"
+                   y="-160.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </code>
+        <priority id="ID1412338843">
+          <posattr x="-320.000000"
+                   y="-139.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1"/>
+        </priority>
+      </trans>
+      <arc id="ID1412339060"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338536"/>
+        <placeend idref="ID1412338500"/>
+        <annot id="ID1412339061">
+          <posattr x="-244.000000"
+                   y="126.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">p</text>
+        </annot>
+      </arc>
+      <arc id="ID1412339122"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338536"/>
+        <placeend idref="ID1412338710"/>
+        <annot id="ID1412339123">
+          <posattr x="-244.000000"
+                   y="42.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">p</text>
+        </annot>
+      </arc>
+      <arc id="ID1412339187"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338838"/>
+        <placeend idref="ID1412338710"/>
+        <annot id="ID1412339188">
+          <posattr x="-244.000000"
+                   y="-54.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">p</text>
+        </annot>
+      </arc>
+      <arc id="ID1412339255"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338838"/>
+        <placeend idref="ID1412338945"/>
+        <annot id="ID1412339256">
+          <posattr x="-156.500000"
+                   y="-90.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">changes(p)</text>
+        </annot>
+      </arc>
+      <arc id="ID1412339326"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338536"/>
+        <placeend idref="ID1412338945"/>
+        <annot id="ID1412339327">
+          <posattr x="-157.500000"
+                   y="37.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">changes(p)</text>
+        </annot>
+      </arc>
+      <arc id="ID1412339549"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338838"/>
+        <placeend idref="ID1412338500"/>
+        <bendpoint id="ID1412339551"
+                   serial="1">
+          <posattr x="-336.000000"
+                   y="-108.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <bendpoint id="ID1412339552"
+                   serial="2">
+          <posattr x="-336.000000"
+                   y="168.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412339550">
+          <posattr x="-309.000000"
+                   y="-97.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="4.0.1">p</text>
+        </annot>
+      </arc>
+      <constraints/>
+      <ssarc id="ID1412351441"
+             order="1"
+             number="2">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351153"/>
+        <destination idref="ID1412351433"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>2:1-&gt;3 New_Page&apos;put_sticks 1: {p=phi(5)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412351446"
+             order="1"
+             number="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351153"/>
+        <destination idref="ID1412351437"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>1:1-&gt;2 New_Page&apos;put_sticks 1: {p=phi(3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412352581"
+             order="1"
+             number="8">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351433"/>
+        <destination idref="ID1412352573"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>8:3-&gt;5 New_Page&apos;put_sticks 1: {p=phi(3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412352586"
+             order="1"
+             number="7">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351433"/>
+        <destination idref="ID1412352577"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>7:3-&gt;6 New_Page&apos;take_sticks 1: {p=phi(1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412352591"
+             order="1"
+             number="6">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351433"/>
+        <destination idref="ID1412351153"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>6:3-&gt;1 New_Page&apos;take_sticks 1: {p=phi(5)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412352894"
+             order="1"
+             number="5">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351437"/>
+        <destination idref="ID1412352573"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>5:2-&gt;5 New_Page&apos;put_sticks 1: {p=phi(5)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412352899"
+             order="1"
+             number="4">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351437"/>
+        <destination idref="ID1412352890"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>4:2-&gt;4 New_Page&apos;take_sticks 1: {p=phi(2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412352904"
+             order="1"
+             number="3">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412351437"/>
+        <destination idref="ID1412351153"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>3:2-&gt;1 New_Page&apos;take_sticks 1: {p=phi(3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353208"
+             order="1"
+             number="10">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352890"/>
+        <destination idref="ID1412353204"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>10:4-&gt;7 New_Page&apos;put_sticks 1: {p=phi(5)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353213"
+             order="1"
+             number="9">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352890"/>
+        <destination idref="ID1412351437"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>9:4-&gt;2 New_Page&apos;put_sticks 1: {p=phi(2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353522"
+             order="1"
+             number="20">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353204"/>
+        <destination idref="ID1412352573"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>20:7-&gt;5 New_Page&apos;put_sticks 1: {p=phi(2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353527"
+             order="1"
+             number="19">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353204"/>
+        <destination idref="ID1412352890"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>19:7-&gt;4 New_Page&apos;take_sticks 1: {p=phi(5)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353532"
+             order="1"
+             number="18">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353204"/>
+        <destination idref="ID1412353518"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>18:7-&gt;10 New_Page&apos;take_sticks 1: {p=phi(4)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353842"
+             order="1"
+             number="28">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353518"/>
+        <destination idref="ID1412353204"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>28:10-&gt;7 New_Page&apos;put_sticks 1: {p=phi(4)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412353847"
+             order="1"
+             number="27">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353518"/>
+        <destination idref="ID1412353838"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>27:10-&gt;8 New_Page&apos;put_sticks 1: {p=phi(2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412354162"
+             order="1"
+             number="23">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353838"/>
+        <destination idref="ID1412352573"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>23:8-&gt;5 New_Page&apos;put_sticks 1: {p=phi(4)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412354167"
+             order="1"
+             number="22">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353838"/>
+        <destination idref="ID1412353518"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>22:8-&gt;10 New_Page&apos;take_sticks 1: {p=phi(2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412354172"
+             order="1"
+             number="21">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412353838"/>
+        <destination idref="ID1412354158"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>21:8-&gt;11 New_Page&apos;take_sticks 1: {p=phi(1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412356038"
+             order="1"
+             number="30">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412354158"/>
+        <destination idref="ID1412356034"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>30:11-&gt;9 New_Page&apos;put_sticks 1: {p=phi(4)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412356043"
+             order="1"
+             number="29">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412354158"/>
+        <destination idref="ID1412353838"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>29:11-&gt;8 New_Page&apos;put_sticks 1: {p=phi(1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412356375"
+             order="1"
+             number="26">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412356034"/>
+        <destination idref="ID1412352573"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>26:9-&gt;5 New_Page&apos;put_sticks 1: {p=phi(1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412356380"
+             order="1"
+             number="25">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412356034"/>
+        <destination idref="ID1412352577"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>25:9-&gt;6 New_Page&apos;take_sticks 1: {p=phi(3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412356385"
+             order="1"
+             number="24">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412356034"/>
+        <destination idref="ID1412354158"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>24:9-&gt;11 New_Page&apos;take_sticks 1: {p=phi(4)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361219"
+             order="1"
+             number="15">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352573"/>
+        <destination idref="ID1412356034"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>15:5-&gt;9 New_Page&apos;take_sticks 1: {p=phi(1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361224"
+             order="1"
+             number="14">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352573"/>
+        <destination idref="ID1412351437"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>14:5-&gt;2 New_Page&apos;take_sticks 1: {p=phi(5)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361229"
+             order="1"
+             number="13">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352573"/>
+        <destination idref="ID1412353204"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>13:5-&gt;7 New_Page&apos;take_sticks 1: {p=phi(2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361234"
+             order="1"
+             number="12">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352573"/>
+        <destination idref="ID1412353838"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>12:5-&gt;8 New_Page&apos;take_sticks 1: {p=phi(4)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361239"
+             order="1"
+             number="11">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352573"/>
+        <destination idref="ID1412351433"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>11:5-&gt;3 New_Page&apos;take_sticks 1: {p=phi(3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361989"
+             order="1"
+             number="17">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352577"/>
+        <destination idref="ID1412356034"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>17:6-&gt;9 New_Page&apos;put_sticks 1: {p=phi(3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412361994"
+             order="1"
+             number="16">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412352577"/>
+        <destination idref="ID1412351433"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>16:6-&gt;3 New_Page&apos;put_sticks 1: {p=phi(1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssnode id="ID1412351153"
+              number="1"
+              predecessors="2"
+              successors="2">
+        <posattr x="-192.000000"
+                 y="-267.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>1:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(2)++
+1`phi(4)
+New_Page&apos;eats 1: 1`phi(3)++
+1`phi(5)
+New_Page&apos;sticks_on_table 1: 1`sti(2)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412351433"
+              number="3"
+              predecessors="3"
+              successors="3">
+        <posattr x="-195.000000"
+                 y="-189.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>3:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(2)++
+1`phi(4)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(3)
+New_Page&apos;sticks_on_table 1: 1`sti(1)++
+1`sti(2)++
+1`sti(5)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412351437"
+              number="2"
+              predecessors="3"
+              successors="3">
+        <posattr x="-191.000000"
+                 y="-336.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>2:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(2)++
+1`phi(3)++
+1`phi(4)
+New_Page&apos;eats 1: 1`phi(5)
+New_Page&apos;sticks_on_table 1: 1`sti(2)++
+1`sti(3)++
+1`sti(4)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412352573"
+              number="5"
+              predecessors="5"
+              successors="5">
+        <posattr x="0.000000"
+                 y="-294.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>5:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(2)++
+1`phi(3)++
+1`phi(4)++
+1`phi(5)
+New_Page&apos;eats 1: empty
+New_Page&apos;sticks_on_table 1: 1`sti(1)++
+1`sti(2)++
+1`sti(3)++
+1`sti(4)++
+1`sti(5)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412352577"
+              number="6"
+              predecessors="2"
+              successors="2">
+        <posattr x="-42.000000"
+                 y="-193.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>6:
+New_Page&apos;thinks 1: 1`phi(2)++
+1`phi(4)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(1)++
+1`phi(3)
+New_Page&apos;sticks_on_table 1: 1`sti(5)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412352890"
+              number="4"
+              predecessors="2"
+              successors="2">
+        <posattr x="-192.000000"
+                 y="-420.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>4:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(3)++
+1`phi(4)
+New_Page&apos;eats 1: 1`phi(2)++
+1`phi(5)
+New_Page&apos;sticks_on_table 1: 1`sti(4)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412353204"
+              number="7"
+              predecessors="3"
+              successors="3">
+        <posattr x="-99.000000"
+                 y="-420.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>7:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(3)++
+1`phi(4)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(2)
+New_Page&apos;sticks_on_table 1: 1`sti(1)++
+1`sti(4)++
+1`sti(5)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412353518"
+              number="10"
+              predecessors="2"
+              successors="2">
+        <posattr x="22.000000"
+                 y="-420.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>10:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(3)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(2)++
+1`phi(4)
+New_Page&apos;sticks_on_table 1: 1`sti(1)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412353838"
+              number="8"
+              predecessors="3"
+              successors="3">
+        <posattr x="189.000000"
+                 y="-420.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>8:
+New_Page&apos;thinks 1: 1`phi(1)++
+1`phi(2)++
+1`phi(3)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(4)
+New_Page&apos;sticks_on_table 1: 1`sti(1)++
+1`sti(2)++
+1`sti(3)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412354158"
+              number="11"
+              predecessors="2"
+              successors="2">
+        <posattr x="194.000000"
+                 y="-280.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>11:
+New_Page&apos;thinks 1: 1`phi(2)++
+1`phi(3)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(1)++
+1`phi(4)
+New_Page&apos;sticks_on_table 1: 1`sti(3)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412356034"
+              number="9"
+              predecessors="3"
+              successors="3">
+        <posattr x="185.000000"
+                 y="-191.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="false">
+          <text>9:
+New_Page&apos;thinks 1: 1`phi(2)++
+1`phi(3)++
+1`phi(4)++
+1`phi(5)
+New_Page&apos;eats 1: 1`phi(1)
+New_Page&apos;sticks_on_table 1: 1`sti(3)++
+1`sti(4)++
+1`sti(5)
+</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+    </page>
+    <instances>
+      <instance id="ID2149"
+                page="ID6"/>
+    </instances>
+    <options>
+      <option name="realtimestamp">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="fair_be">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="global_fairness">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="outputdirectory">
+        <value>
+          <text>&lt;same as model&gt;</text>
+        </value>
+      </option>
+      <option name="extensions.10001.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10003.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10002.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10006.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10005.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repciavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repcount">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repfirstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="replastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repmax">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repmin">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repstddev">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repsum">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repvariance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="avg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="ciavg">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="count">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="firstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="lastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="max">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="min">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="ssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="ssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="stddev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="sum">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="variance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="firstupdate">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="interval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="lastupdate">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedciavg">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedcount">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedfirstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedlastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedmax">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedmin">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedstddev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedsum">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedvariance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+    </options>
+    <binders>
+      <cpnbinder id="ID2222"
+                 x="863"
+                 y="163"
+                 width="944"
+                 height="714">
+        <sheets>
+          <cpnsheet id="ID2215"
+                    panx="-74.000000"
+                    pany="-113.000000"
+                    zoom="1.000000"
+                    instance="ID2149">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
+        </sheets>
+        <zorder>
+          <position value="0"/>
+        </zorder>
+      </cpnbinder>
+    </binders>
+    <monitorblock name="Monitors"/>
+    <IndexNode expanded="true">
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false">
+          <IndexNode expanded="false">
+            <IndexNode expanded="false">
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+            </IndexNode>
+            <IndexNode expanded="false">
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+            </IndexNode>
+          </IndexNode>
+          <IndexNode expanded="false">
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+          </IndexNode>
+        </IndexNode>
+        <IndexNode expanded="false">
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+        </IndexNode>
+      </IndexNode>
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+      </IndexNode>
+      <IndexNode expanded="true">
+        <IndexNode expanded="false">
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+        </IndexNode>
+        <IndexNode expanded="false">
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+        </IndexNode>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+      </IndexNode>
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="true"/>
+    </IndexNode>
+  </cpnet>
+</workspaceElements>

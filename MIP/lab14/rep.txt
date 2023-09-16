@@ -1,0 +1,40 @@
+
+
+              GPSS World Simulation Report - Untitled Model 1.1.1
+
+
+                   Wednesday, June 01, 2022 20:32:14  
+
+           START TIME           END TIME  BLOCKS  FACILITIES  STORAGES
+                0.000            480.000     9        1          0
+
+
+              NAME                       VALUE  
+          OPERATOR                    10001.000
+          OPERATOR_Q                  10000.000
+
+
+ LABEL              LOC  BLOCK TYPE     ENTRY COUNT CURRENT COUNT RETRY
+                    1    GENERATE            32             0       0
+                    2    QUEUE               32             0       0
+                    3    SEIZE               32             0       0
+                    4    DEPART              32             0       0
+                    5    ADVANCE             32             1       0
+                    6    RELEASE             31             0       0
+                    7    TERMINATE           31             0       0
+                    8    GENERATE             1             0       0
+                    9    TERMINATE            1             0       0
+
+
+FACILITY         ENTRIES  UTIL.   AVE. TIME AVAIL. OWNER PEND INTER RETRY DELAY
+ OPERATOR            32    0.639       9.589  1       33    0    0     0      0
+
+
+QUEUE              MAX CONT. ENTRY ENTRY(0) AVE.CONT. AVE.TIME   AVE.(-0) RETRY
+ OPERATOR_Q          1    0     32     31     0.001      0.021      0.671   0
+
+
+FEC XN   PRI         BDT      ASSEM  CURRENT  NEXT  PARAMETER    VALUE
+    33    0         489.786     33      5      6
+    34    0         496.081     34      0      1
+    35    0         960.000     35      0      8
